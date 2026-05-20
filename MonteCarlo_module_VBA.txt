@@ -1,0 +1,22 @@
+Sub MonteCarloSimulation()
+    Dim i As Long
+    Dim targetSheet As Worksheet
+    
+    ' Set worksheet
+    Set targetSheet = ThisWorkbook.Sheets("MonteCarlo")
+    
+    For i = 1 To 5000
+        ' Force sheet recalculation to generate a new random value in G10
+        Application.Calculate
+        
+        ' Write G10 value to range B23:B5022
+        targetSheet.Cells(22 + i, 2).Value = targetSheet.Range("G10").Value
+    Next i
+    
+    ' Restore default Excel settings
+    Application.Calculation = xlCalculationAutomatic
+    Application.ScreenUpdating = True
+    
+    ' Completion message
+    MsgBox "Monte Carlo simulation completed", vbInformation, "Status"
+End Sub
