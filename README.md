@@ -7,7 +7,7 @@ The primary goal of this simulation is to determine the probability of keeping t
 
 ### Key Features & Findings
 * **Statistical Insights:** Analysis of 5,000 iterations indicates a **48.2% probability** that the project costs will remain under the target budget, with a **51.8% risk** of cost overruns.
-* **Data Visualization:** Includes a frequency histogram and a Cumulative Distribution Function (CDF) to identify the most frequent cost outcomes (predominantly within the 9,250–9,500 range).
+* **Data Visualization:** Includes a frequency histogram and a Cumulative Distribution Function (CDF) to identify the most frequent cost outcomes.
 
 ### Automation (VBA Macro)
-The 5,000 random simulation records were dynamically generated using an optimized VBA script. The macro automates the data-gathering process by forcing iterative recalculations of the stochastic model (cell `G10`) and logging the outputs into a structured dataset (range `B23:B5022`). 
+The 5,000 random simulation records were generated using VBA script. The macro automates the data-gathering process by forcing iterative recalculations of the model (cell `G10`) and logging the outputs into range (cells `B23:B5022`). 
